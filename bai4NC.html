@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" placeholder="Hãy nhập so A" id="a">
+    <input type="text" placeholder="Hãy nhập so B" id="b">
+    <button onclick="getData()">Nhập</button>
+    <script>
+        function getData() {
+            let SoA = parseInt(document.getElementById("a").value);
+            let SoB = parseInt(document.getElementById("b").value);
+            let c = SoA + SoB;
+            document.write("Giá trị a : " + SoA + "<br> Giá trị b : " + SoB);
+            document.write("<br> Tổng 2 số : " + c);
+            alert("Giá trị a : " + SoA + "\nGiá trị b : " + SoB + "\nTổng 2 số : " + c);
+            console.log("Giá trị a : " + SoA + "\nGiá trị b : " + SoB + "\nTổng 2 số : " + c);
+        };
+    </script>
+</body>
+
+</html>
