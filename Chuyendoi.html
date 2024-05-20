@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table  >
+        <tr >
+            <th>
+                <label for="amount">Amount</label>
+            </th>
+            <th>From Currency</th>
+            <th>To Currency</th>
+            <th></th>
+        </tr>
+        <tr>
+            <th>
+            <input type="text" id="amount">
+        </th>
+        <th>
+            <select name="" id="fromcrrency">
+                <option value="VND">Việt Nam</option>
+                <option value="USD">USD</option>
+            </select>
+        </th>
+        <th>
+            <select name="" id="tocrrency">
+                <option value="USD">USD</option>
+                <option value="VND">Việt Nam</option>
+            </select>
+        </th>
+        <th>
+            <button onclick="convertCurrency()" style="display: block; padding:5px 15px; background-color:#8F82CF; border-radius: 10px; ">Convert</button>
+        </th>
+        </tr>
+        <tr>
+            <th>
+                <p id="result"></p>
+            </th>
+        </tr>
+    </table>
+    <script>
+        function convertCurrency(){
+        var amount =parseFloat(document.getElementById("amount").value);
+        var fromcrrency = document.getElementById("fromcrrency").value;
+        var tocrrency =document.getElementById("tocrrency").value;
+            var convertCurrency ="";
+        var Tigia ={
+            "VND":{
+                "USD":0.000039,
+                "VND":1
+            },
+            "USD":{
+                "VND":25.451,
+                "USD":1
+            }
+        };
+        if (!isNaN(amount)){
+                 convertCurrency =amount*Tigia[fromcrrency][tocrrency];
+        }
+
+        document.getElementById("result").innerText="Result:  " + convertCurrency + " " + tocrrency;
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="celsius" placeholder="Độ C (Celsius)"> 
+    <button onclick="convertToFahrenheit()">Nhập</button>
+    <p id="result"></p>
+    <script>
+
+        // Bài 1
+
+        // let a = parseInt(prompt("Nhap vao diem cua mon Vat Ly"));
+        // let b = parseInt(prompt("Nhap vao diem cua mon Hoa Hoc"));
+        // let c = parseInt(prompt("Nhap vao diem cua mon Sinh hoc"));
+        // let d = (a+b+c)/2;
+        // alert(d);
+
+        //Bài 2 
+
+        function convertToFahrenheit(){
+          var celsius =  document.getElementById("celsius").value;
+                var fahrenheit = ( celsius*9)/5 +32;
+            document.getElementById("result").innerText="Result: "+fahrenheit;
+        }
+        
+        //Bài 3
+        // var Pi=3.14;
+        var r =parseInt(prompt("Nhap vao ban kinh "));
+        var R = Math.pow(r,2) * Math.PI;
+        var C =2*r * Math.PI;
+        console.log(R);
+        console.log(C);
+
+
+    </script>
+</body>
+</html>
